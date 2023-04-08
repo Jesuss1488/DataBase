@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let json1 = `{
+          "firstName": "",
+          "lastName": "Калашников",
+          "age": 20,
+          "adress":{
+              "streetAddress":"пл.Гагарина, 1",
+              "city":"Ростов-на-дону",
+              "postalCode":344000
+          },
+          "phoneNumbers":{
+              "in1": {
+                  "type1":"home",
+                  "number1":"634-5625-45-63"
+              },
+              "in2":{
+                  "type2":"fax",
+                  "number2":"634-5625-45-64"
+              }
+            }
+      }`;
+
+      let data = JSON.parse(json1);
+      console.log(data);
+      console.log(data.firstName);
+      console.log(data.lastName);
+      console.log(data.age);
+      console.log(data.adress.city);
+      console.log(data.phoneNumbers.in1.number1);
+      console.log(data.phoneNumbers.in2.number2);
+      let obj = JSON.parse(json1);
+      console.log(obj);
+      let json2 = JSON.stringify(data);
+      console.log(json2);
+    </script>
+  </body>
+</html>
